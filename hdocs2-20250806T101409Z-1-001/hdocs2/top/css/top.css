@@ -1,0 +1,310 @@
+
+#main-visual,.home-items2,.home-items3,.home-items4{
+  position: relative;
+    overflow: hidden;
+}
+#main-visual,.full-screen{
+  width: 100vw;
+  height: 100vh;
+}
+#main-visual .video-wrapper video {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+.box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  -webkit-transition: all 1.2s ease; /* 1.2秒でフェードアウト */
+          transition: all 1.2s ease;
+  color: #fff; /* ローディングアニメーションカラー */
+  background-color: #333; /* 背景カラー */
+}
+.box.loaded{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+/* ローディングアニメーション */
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  width: 120px;
+  height: 120px;
+}
+
+/* Loading テキスト */
+.spinner span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) ;
+          transform: translate(-50%, -50%) ;
+  font-size: 12px;
+}
+/* 1番目のアニメーションの場合 */
+.spinner.type1 {
+  border-radius: 50%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #fff rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.12);
+  /* ローディング要素のアニメーションを指定 */
+  -webkit-animation: spinner1_1 1.5s infinite linear forwards;
+          animation: spinner1_1 1.5s infinite linear forwards;
+}
+.spinner.type1 span {
+  /* Loading テキストのアニメーションを指定 */
+  animation: spinner_loading_text 1.5s infinite linear forwards reverse;
+}
+
+/* ローディング要素のアニメーション内容 */
+@-webkit-keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes spinner1_1 {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+            transform: translate(-50%, -50%) rotate(0);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Loading テキストのアニメーション内容 */
+@-webkit-keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes spinner_loading_text {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) rotate(180deg);
+            transform: translate(-50%, -50%) rotate(180deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.scrolldown{
+	position:absolute;
+	bottom:3%;
+	right: 50%;
+    /*矢印の動き1秒かけて永遠にループ*/
+	animation: arrowmove 1s ease-in-out infinite;
+}
+@keyframes arrowmove{
+      0%{bottom:1%;}
+      50%{bottom:3%;}
+     100%{bottom:1%;}
+ }
+.scrolldown span{
+  width: 30px;
+	position: absolute;
+	left:20px;
+	bottom:10px;
+	color: #ffffff;
+	font-size: 1.0rem;
+	letter-spacing: 0.02em;
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+.scrolldown:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    width: 2px;
+    height: 20px;
+    background: #fff;
+    transform: skewX(-31deg);
+}
+.scrolldown:after{
+	content:"";
+	position: absolute;
+	bottom:0;
+	right:0;
+	width:2px;
+	height: 50px;
+	background:#fff;
+}
+.bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+}
+.video-wrapper .sp{
+  display: none;
+}
+.home-items2 .play-bg{
+  width: 100vw;
+  height: 50vh;
+  background-image: url("../image/Top-image3.jpg");
+  background-position: bottom;
+}
+.home-items2 .refresh-bg{
+  width: 100vw;
+  height: 50vh;
+  background-image: url("../image/Top-image4.jpg");
+  top: 50%;
+}
+
+.home-items3 .standard-bg{
+  width: 50vw;
+  height: 100vh;
+  background-image: url("../image/Top-image5.jpg");
+}
+.home-items3 .suite-bg{
+  width: 50vw;
+  height: 100vh;
+  background-image: url("../image/Top-image6.jpg");
+  right: 0px;
+}
+.gym-bg{
+  width: 25vw;
+  min-height: 100vh;
+  background-image: url("../image/Top-image7.jpg");
+  left: 25%;
+  top: 0;
+}
+.courtyard-bg{
+  width: 25vw;
+  height: 100vh;
+  background-image: url("../image/Top-image8.jpg");
+  right: 0;
+  top: 0;
+  background-position:center;
+}
+.home-items4 .video-wrapper{
+    width: 25vw;
+    height: 100%;
+}
+.home-items4 .video-wrapper video{
+    width: 25vw;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+.pool video{
+  left: 0;
+  transform: translate(0);
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+}
+.drink video {
+  right:33.3%;
+  transform: translate(33.3%);
+  -webkit-transform: translate(33.3%);
+  -ms-transform: translate(33.3%);
+}
+@media screen and (max-width: 600px) {
+
+
+  .video-wrapper .sp{
+    display: block;
+  }
+  .video-wrapper .web{
+    display: none;
+  }
+.gym-bg{
+    width: 50vw;
+    min-height: 55vh;
+    background-image: url("../image/Top-image7.jpg");
+    left:  0;
+    bottom: 0;
+    position: absolute;
+    background-size: 200% 100%;
+  }
+.courtyard-bg{
+    width: 50vw;
+    height: 55vh;
+    background-image: url("../image/Top-image8.jpg");
+    right:  0;
+    top: 0;
+    background-position:center;
+    position: absolute;
+
+  }
+  .home-items4 .video-wrapper{
+      width: 55vw;
+      height: 48vh;
+  }
+  .home-items4 .video-wrapper video{
+      width: 55vw;
+      height: 48vh;
+      z-index: -1;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+  }
+  .pool{
+    position: absolute;
+    left: 0;
+      top: 0;
+      transform: translate(0);
+      -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+  }
+  .drink {
+    position: absolute;
+    right: 0;
+      bottom: 0;
+      transform: translate(0);
+      -webkit-transform: translate(0);
+      -ms-transform: translate(0);
+  }
+  .home-items2 .refresh-bg{
+    background-position: center;
+    background-size: 120% 100%;
+  }
+  .home-items3 .standard-bg{
+    background-position: center;
+    background-size: 200% 100%;
+  }
+  .home-items3 .suite-bg{
+    background-position: 90%;
+    background-size: 150% 100%;
+  }
+}

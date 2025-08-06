@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Doariについて|Doari沖縄【公式】最高のくつろぎへの扉を開く</title>
+  <meta name="description" content="Doari沖縄は上質な空間で皆様の疲れを癒やし健康へ繋げるリゾートホテルです。
+  恩納村の綺麗な海と共にくつろぎをご提供。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../common/css/style.css">
+  <link rel="stylesheet" href="css/reserve.css">
+  <link rel="icon" href="../common/image/favicon.ico">
+</head>
+
+<body id="design-content">
+
+  <header id="header" role="banner">
+          <h1 id="header-logo"><a href="../index.html"><img src="../common/image/logo.svg" alt="Doariのロゴ"></a></h1>
+          <button type="button" class="menu-btn js-btn">
+              <span class="btn-line"></span>
+            </button>
+
+          <nav id="nav" role="navigation">
+            <ul class="menu">
+              <li class="menu-list"><a href="../index.html">Top</a></li>
+              <li class="menu-list"><a href="../service/service.html">Service</a></li>
+              <li class="menu-list"><a href="../room/room.html">Room</a></li>
+              <li class="menu-list"><a href="../facility/facility.html">Facility</a></li>
+            </ul>
+          </nav>
+          <div class="reserve-btn header-reserve-btn">
+            <a href="../reserve/reserve.html"><p>宿泊予約</p></a>
+          </div>
+  </header>
+
+<main role="main">
+   <div class="heading-wrap">
+     <h2 class="heading-border"><span class="line">宿泊予約</span></h2>
+   </div>
+
+<div class="box-serch">
+      <div class="container-calendar">
+         <h3 id="monthAndYear"></h3>
+         <div class="button-container-calendar">
+             <button id="previous" onclick="previous()">‹</button>
+             <button id="next" onclick="next()">›</button>
+         </div>
+
+         <table class="table-calendar" id="calendar" data-lang="ja">
+             <thead id="thead-month"></thead>
+             <tbody id="calendar-body"></tbody>
+         </table>
+
+         <div class="footer-container-calendar">
+             <label for="month">日付指定：</label>
+             <select id="year" onchange="jump()">
+             </select>
+             <select id="month" onchange="jump()">
+                 <option value=0>1月</option>
+                 <option value=1>2月</option>
+                 <option value=2>3月</option>
+                 <option value=3>4月</option>
+                 <option value=4>5月</option>
+                 <option value=5>6月</option>
+                 <option value=6>7月</option>
+                 <option value=7>8月</option>
+                 <option value=8>9月</option>
+                 <option value=9>10月</option>
+                 <option value=10>11月</option>
+                 <option value=11>12月</option>
+             </select>
+         </div>
+   </div>
+
+    <div class="select-box">
+      <div class="info-text">
+        <span class="adjustment">泊数</span>
+          <select class="select-area">
+        <option value=0>1泊</option>
+        <option value=1 selected>2泊</option>
+        <option value=2>3泊</option>
+        <option value=3>4泊</option></select>
+      </div>
+
+      <div class="info-text">
+       <span class="adjustment">大人</span>
+       <select class="select-area">
+       <option value=0>1名</option>
+       <option value=1 selected>2名</option>
+       <option value=2>3名</option>
+       <option value=3>4名</option></select>
+     </div>
+     <div class="info-text">
+        <span class="adjustment">子供</span>
+        <select class="select-area">
+        <option value=0>1名</option>
+        <option value=1 selected>2名</option>
+        <option value=2>3名</option>
+        <option value=3>4名</option></select>
+      </div>
+    </div>
+    <div class="search-btn">
+      <a href=""><p>この条件で検索</p></a>
+    </div>
+
+
+
+</div>
+ </main>
+
+
+
+<footer id="footer">
+      <div id="footer-contents">
+        <div id="footer-content1">
+          <div id="footer-content1-access"class="footer-content">
+            <p class="align">〒212-3333<br>
+                             沖縄県恩納村1-2-3<br>
+                             Doari沖縄</p>
+              <div class="circle-btn-contents">
+                <p><a href="../access/access.html">
+                    <span class="circle-btn">アクセス</span></a>
+                </p>
+              </div>
+          </div>
+          <div id="footer-content1-form" class="footer-content">
+              <p class="align">電話でのお問い合わせ<br>
+                <span class="under-line">000-0000-0000</span></p>
+            <div class="circle-btn-contents">
+              <a href="../contact/contact.html"><p>
+              <span class="circle-btn">お問い合わせ</span></P>
+              </a>
+            </div>
+           </div>
+          </div>
+
+          <div id="footer-content2" class="flexbox-center">
+              <p id="footer-content2-logo"><a href="../index.html"><img src="../common/image/logo.svg" alt="Doariのロゴ"></a></p>
+            <div class="footer-reserve-btn reserve-btn">
+              <a href="../reserve/reserve.html"><p>宿泊予約</p></a>
+            </div>
+          </div>
+
+          <div id="footer-content3">
+              <p><img src="../common/image/facebook-icon.png" alt="Facebook"></p>
+              <p><img src="../common/image/Instagram-icon.png" alt="Instagram"></p>
+              <p><img src="../common/image/twitter-icon.png" alt="Twitter"></p>
+          </div>
+        </div>
+            <div id="copyright">
+              <p>© 2022 Doari Okinawa All rights reserved.</p>
+            </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+
+   <script src="../common/js/common.js"></script>
+    <script src="js/reserve.js"></script>
+  </body>
+</html>

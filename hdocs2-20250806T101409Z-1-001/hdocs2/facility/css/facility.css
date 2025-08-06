@@ -1,0 +1,120 @@
+
+.slide-bg1{
+  background-image: url("../image/facility-image1.jpg");
+  background-position: center;
+}
+.margin-bottom{
+  margin-bottom: 10%;
+}
+
+.sub-bg-wrap{
+   width: 300px;
+   height: 200px;
+   margin: 0 auto 5% auto;
+}
+.sub-bg {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.pool-bg{
+  background-image: url("../image/facility-image5.jpg");
+}
+.flexbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 12%;
+}
+.facility-content .cross-head{
+  margin-bottom:3%;
+  padding-top: 5vh;
+  font-feature-settings: "palt";
+}
+.facility-content .cross-head .font-size{
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+.facility-content .info-title{
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-size: 1.2em;
+}
+.info-title h4{
+  font-weight: 600;
+}
+.gym-bg{
+  background-image: url("../image/facility-image6.jpg");
+}
+ .facility-content .main-text{
+  height: 180px;
+  width: 355px;
+  line-height: 36px;
+
+}
+.facility-content .main-text p{
+  text-align: left;
+  padding-left: 30px;
+}
+.restaurant-bg{
+  background-image: url("../image/facility-image7.jpg");
+}
+.cafe-bg{
+  background-image: url("../image/facility-image8.jpg");
+}
+.top-margin{
+  margin-top: 10%;
+}
+.paragraph{
+  display:inline-block;
+  padding-left: 8px;
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+}
+.info-text .flexbox-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  padding-right: 8px;
+}
+.info-text span{
+  width: 100px;
+}
+.info-box .info-text p .adjustment{
+  /* width: 45%;
+  display: inline-block; */
+  white-space: nowrap;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+
+.flexbox {
+  width: 80%;
+  flex-flow: column;
+  margin: auto;
+  align-items: center;
+}
+.facility-content{
+  margin-top: 35%;
+}
+.info-title h4{
+  font-weight: 400;
+}
+.facility-content .main-text p{
+  padding-left: 0px;
+  margin: auto;
+  width: 58%
+}
+.facility-content .cross-head{
+  padding-top: 5%;
+}
+.facility-content .cross-head .font-size{
+  font-size: 1.2rem;
+  letter-spacing: -0.5px;
+}
+
+}

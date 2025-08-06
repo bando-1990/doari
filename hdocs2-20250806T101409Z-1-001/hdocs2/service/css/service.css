@@ -1,0 +1,42 @@
+
+.main-bg{
+  background-image: url("../image/service-image1.jpg");
+  width: 100vw;
+  height: 50vh;
+}
+
+.item-group{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 15%;
+}
+.item-group .area{
+  position: absolute;
+  top: 50%;
+}
+.items{
+position: absolute;
+  width: 100%;
+  height: 50%;
+}
+.play-bg{
+  background-image: url("../image/service-image2.jpg");
+}
+.refresh-bg{
+  background-image: url("../image/service-image3.jpg");
+}
+@media screen and (max-width: 600px) {
+  .main-bg{
+    background-size: 180% 100%;
+  }
+  .play-bg{
+    background-size: 200% 100%;
+    background-position: center;
+  }
+  .refresh-bg{
+    background-size: 150% 100%;
+      background-position: center;
+      background-image: url("../image/service-image9.jpg");
+  }
+}

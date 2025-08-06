@@ -1,0 +1,100 @@
+
+.main-bg{
+  background-image: url("../image/refresh-image1.jpg");
+}
+.catch-bg1{
+  background-image: url("../image/refresh-image2.jpg");
+}
+.catch-bg2{
+  background-image: url("../image/refresh-image4.jpg");
+}
+.fullbg-wrap{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.fullsize-bg{
+  width: 100vw;
+  height:100vh;
+background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+.bg-label{
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  font-size: 3.5em;
+  color: #f8fcfb;
+  font-family: "游明朝","游明朝体",serif;
+  letter-spacing: -10px;
+}
+.sub-bg-wrap{
+  width: 100vw;
+height:100vh;
+   margin: 20% auto 10% auto;
+     position: relative;
+}
+.sub-bg {
+  width: 100vw;
+    height:100vh;
+  background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.yoga-bg{
+  background-image: url("../image/refresh-image3.jpg");
+}
+.massage-bg{
+  background-image: url("../image/refresh-image5.jpg");
+}
+.info-text .flexbox-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  padding-right: 8px;
+}
+.info-text span{
+  width: 100px;
+}
+.info-box .info-text p .adjustment{
+  /* width: 45%;
+  display: inline-block; */
+  white-space: nowrap;
+  text-align: left;
+}
+.massage-area .info-text .flexbox-center{
+  padding-right: 0px;
+  padding-left: 10%;
+}
+@media screen and (max-width: 600px) {
+
+  .bg-label{
+    font-size: 3em;
+  }
+  .fullbg-wrap{
+    height: 50vh;
+  }
+  .fullsize-bg{
+    height:100%;
+  }
+  .main-bg{
+    background-size: 150% 100%;
+  }
+  .sub-bg-wrap{
+  height:50vh;
+  }
+  .sub-bg {
+      height:100%;
+  }
+  .yoga-bg{
+ background-position: center;
+  }
+  .massage-bg{
+    background-size: 150% 100%;
+  }
+  .wrap {
+  overflow: hidden;
+}
+}
